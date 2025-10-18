@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawasol - Advertising Excellence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">TAWASOL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/about/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/contact/contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3"><button class="btn btn-primary">Get Started</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1>
+                        Your Advertising
+                        <span>Experts</span>
+                    </h1>
+                    <p>We transform brands through captivating visuals and expert advertising, making your brand
+                        unforgettable. Narratives and design solutions that set you apart in the world of advertising.
+                    </p>
+                    <button class="btn btn-primary btn-lg me-3 mb-2">Start Campaign</button>
+                    <button class="btn btn-outline-dark btn-lg mb-2">View Portfolio</button>
+                </div>
+                <div class="col-lg-6 billboard-container">
+                    <div class="billboard-wrapper">
+                        <!-- Billboard Frame -->
+                        <svg class="billboard-frame" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Billboard Structure -->
+                            <rect x="50" y="80" width="500" height="280" rx="10" fill="#1A1A1A" />
+
+                            <!-- Billboard Lights -->
+                            <circle cx="100" cy="90" r="5" fill="#FFD700" opacity="0.8">
+                                <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="200" cy="90" r="5" fill="#FFD700" opacity="0.8">
+                                <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.5s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="400" cy="90" r="5" fill="#FFD700" opacity="0.8">
+                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.2s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="500" cy="90" r="5" fill="#FFD700" opacity="0.8">
+                                <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.8s"
+                                    repeatCount="indefinite" />
+                            </circle>
+
+                            <!-- Support Poles -->
+                            <rect x="150" y="360" width="15" height="40" fill="#4B5563" />
+                            <rect x="435" y="360" width="15" height="40" fill="#4B5563" />
+
+                            <!-- Ground -->
+                            <ellipse cx="300" cy="395" rx="120" ry="8" fill="#D1D5DB" opacity="0.3" />
+                        </svg>
+
+                        <!-- Billboard Content Carousel -->
+                        <div id="billboardCarousel" class="carousel slide billboard-carousel" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="billboard-content">
+                                        <svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg">
+                                            <defs>
+                                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" style="stop-color:#E31E24;stop-opacity:1" />
+                                                    <stop offset="100%" style="stop-color:#B91C1C;stop-opacity:1" />
+                                                </linearGradient>
+                                            </defs>
+                                            <rect width="460" height="240" fill="url(#grad1)" />
+                                            <text x="230" y="100" font-size="42" font-weight="bold" fill="white"
+                                                text-anchor="middle">PREMIUM</text>
+                                            <text x="230" y="140" font-size="38" font-weight="bold" fill="white"
+                                                text-anchor="middle">BRANDS</text>
+                                            <text x="230" y="180" font-size="18" fill="#FEE2E2"
+                                                text-anchor="middle">Your Vision, Our Mission</text>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="billboard-content">
+                                        <svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="460" height="240" fill="#1A1A1A" />
+                                            <circle cx="230" cy="80" r="40" fill="#E31E24" opacity="0.2" />
+                                            <circle cx="230" cy="80" r="30" fill="#E31E24" opacity="0.4" />
+                                            <circle cx="230" cy="80" r="20" fill="#E31E24" />
+                                            <text x="230" y="150" font-size="36" font-weight="bold" fill="white"
+                                                text-anchor="middle">DIGITAL</text>
+                                            <text x="230" y="185" font-size="32" font-weight="bold" fill="#E31E24"
+                                                text-anchor="middle">IMPACT</text>
+                                            <rect x="100" y="200" width="60" height="4" fill="#E31E24" />
+                                            <rect x="180" y="200" width="100" height="4" fill="#E31E24" />
+                                            <rect x="300" y="200" width="60" height="4" fill="#E31E24" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="billboard-content">
+                                        <svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg">
+                                            <defs>
+                                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                    <stop offset="0%" style="stop-color:#B91C1C;stop-opacity:1" />
+                                                    <stop offset="50%" style="stop-color:#E31E24;stop-opacity:1" />
+                                                    <stop offset="100%" style="stop-color:#B91C1C;stop-opacity:1" />
+                                                </linearGradient>
+                                            </defs>
+                                            <rect width="460" height="240" fill="url(#grad2)" />
+                                            <polygon points="230,40 260,100 200,100" fill="white" opacity="0.9" />
+                                            <text x="230" y="150" font-size="40" font-weight="bold" fill="white"
+                                                text-anchor="middle">REACH</text>
+                                            <text x="230" y="190" font-size="28" font-weight="600" fill="#FEE2E2"
+                                                text-anchor="middle">MILLIONS DAILY</text>
+                                            <circle cx="80" cy="200" r="15" fill="white" opacity="0.3" />
+                                            <circle cx="380" cy="200" r="15" fill="white" opacity="0.3" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- service section -->
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our <span>Services</span></h2>
+            <div class="row g-4">
+
+                <!-- Tags and Name Plates -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Tags+%26+Name+Plates"
+                            alt="Tags and Name Plates" class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h3>Tags and Name Plates</h3>
+                        <p>Etching, engraving, screen printing, and heat transfer on aluminum, stainless steel,
+                            phenolic, plastics, and paper.</p>
+                    </div>
+                </div>
+
+                <!-- Printing and Installation -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Printing+%26+Installation"
+                            alt="Printing and Installation" class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Printing and Installation</h3>
+                        <p>Flags, stickers, banners, wall branding, backdrops, acrylic posters, and frosted or
+                            see-through glass stickers.</p>
+                    </div>
+                </div>
+
+                <!-- Vehicle Graphics -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Vehicle+Graphics" alt="Vehicle Graphics"
+                            class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Vehicle Graphics</h3>
+                        <p>Full and partial wraps, vinyl cut graphics, printed graphics, and stencil work lettering for
+                            any vehicle type.</p>
+                    </div>
+                </div>
+
+                <!-- Safety Signs -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Safety+Signs" alt="Safety Signs"
+                            class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Safety Signs</h3>
+                        <p>Road signs, caution signs, wall posters, PPE and safety wear brandings to promote workplace
+                            safety and awareness.</p>
+                    </div>
+                </div>
+
+                <!-- Exhibition Booths -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Exhibition+Booths" alt="Exhibition Booths"
+                            class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-store-alt"></i>
+                        </div>
+                        <h3>Exhibition Booths</h3>
+                        <p>Custom designs including corner, inline, island, peninsula, and perimeter booths for a
+                            professional display setup.</p>
+                    </div>
+                </div>
+
+                <!-- Indoor Signages -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Indoor+Signages" alt="Indoor Signages"
+                            class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-sign"></i>
+                        </div>
+                        <h3>Indoor Signages</h3>
+                        <p>Lobby and directional signs, wall wraps, interior banners, hanging signs, floor graphics, and
+                            emergency exit signage.</p>
+                    </div>
+                </div>
+
+                <!-- Outdoor Signages -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Outdoor+Signages" alt="Outdoor Signages"
+                            class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Outdoor Signages</h3>
+                        <p>Building numbers, company names, wayfinding, road safety, PPE, and advertising signs
+                            including unipoles.</p>
+                    </div>
+                </div>
+
+                <!-- Corporate Gifts -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Corporate+Gifts" alt="Corporate Gifts"
+                            class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>Corporate Gifts</h3>
+                        <p>Cups, mugs, t-shirts, caps, USBs, power banks, pens, and premium business gifts for all
+                            corporate events.</p>
+                    </div>
+                </div>
+
+                <!-- Corporate Identity -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <img src="https://via.placeholder.com/400x200?text=Corporate+Identity" alt="Corporate Identity"
+                            class="img-fluid mb-3 rounded">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Corporate Identity</h3>
+                        <p>Letterheads, brochures, business cards, flyers, magazines, diaries, calendars, and branded
+                            stationery materials.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number">250+</div>
+                        <div class="stat-label">Active Billboards</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Cities Covered</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Carousel Section -->
+    <section class="clients-section">
+        <div class="container">
+            <h2 class="section-title mb-5">Our <span>Trusted Clients</span></h2>
+            <div id="clientsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4 align-items-center justify-content-center">
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="10" y="15" width="100" height="30" rx="5" fill="#E31E24" />
+                                        <text x="60" y="38" font-size="16" font-weight="bold" fill="white"
+                                            text-anchor="middle">BRAND A</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="60" cy="30" r="25" fill="#1A1A1A" />
+                                        <text x="60" y="36" font-size="14" font-weight="bold" fill="#E31E24"
+                                            text-anchor="middle">TECH</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <polygon points="60,10 90,50 30,50" fill="#E31E24" />
+                                        <text x="60" y="42" font-size="12" font-weight="bold" fill="white"
+                                            text-anchor="middle">CORP</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="15" y="20" width="90" height="20" rx="10" fill="#1A1A1A" />
+                                        <text x="60" y="35" font-size="12" font-weight="bold" fill="white"
+                                            text-anchor="middle">RETAIL CO</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4 align-items-center justify-content-center">
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="20" y="15" width="80" height="30" rx="15" fill="#E31E24" />
+                                        <text x="60" y="36" font-size="14" font-weight="bold" fill="white"
+                                            text-anchor="middle">BANK</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 30 45 L 60 15 L 90 45 Z" fill="none" stroke="#1A1A1A"
+                                            stroke-width="4" />
+                                        <text x="60" y="50" font-size="11" font-weight="bold" fill="#1A1A1A"
+                                            text-anchor="middle">BUILD</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="60" cy="30" r="20" fill="none" stroke="#E31E24" stroke-width="4" />
+                                        <text x="60" y="36" font-size="16" font-weight="bold" fill="#E31E24"
+                                            text-anchor="middle">M</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="25" y="18" width="70" height="24" fill="#1A1A1A" />
+                                        <text x="60" y="35" font-size="13" font-weight="bold" fill="white"
+                                            text-anchor="middle">AUTO</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4 align-items-center justify-content-center">
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <ellipse cx="60" cy="30" rx="35" ry="20" fill="#E31E24" />
+                                        <text x="60" y="36" font-size="12" font-weight="bold" fill="white"
+                                            text-anchor="middle">FOOD</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="20" y="20" width="80" height="20" fill="#1A1A1A" />
+                                        <text x="60" y="35" font-size="11" font-weight="bold" fill="#E31E24"
+                                            text-anchor="middle">FASHION</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <polygon points="60,15 80,40 40,40" fill="#E31E24" />
+                                        <text x="60" y="52" font-size="10" font-weight="bold" fill="#1A1A1A"
+                                            text-anchor="middle">ENERGY</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="client-logo">
+                                    <svg viewBox="0 0 120 60" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="60" cy="30" r="22" fill="#1A1A1A" />
+                                        <text x="60" y="36" font-size="13" font-weight="bold" fill="white"
+                                            text-anchor="middle">HOTELS</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>TAWASOL</h5>
+                    <p style="color: rgba(255,255,255,0.7);">Connecting brands with audiences through innovative outdoor
+                        advertising solutions.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <div class="d-flex flex-column">
+                        <a href="#home" class="mb-2">Home</a>
+                        <a href="#services" class="mb-2">Services</a>
+                        <a href="#about" class="mb-2">About Us</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+                    <h5>Services</h5>
+                    <div class="d-flex flex-column">
+                        <a href="#" class="mb-2">Billboard Advertising</a>
+                        <a href="#" class="mb-2">Digital Displays</a>
+                        <a href="#" class="mb-2">Campaign Strategy</a>
+                        <a href="#">Media Planning</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5>Contact Info</h5>
+                    <p style="color: rgba(255,255,255,0.7);">
+                        <i class="fas fa-map-marker-alt me-2"></i>Dammam, Saudi Arabia<br>
+                        <i class="fas fa-phone me-2"></i>+966 XXX XXX XXX<br>
+                        <i class="fas fa-envelope me-2"></i>info@tawasol.com
+                    </p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0 1rem;">
+            <div class="text-center" style="color: rgba(255,255,255,0.5);">
+                <p>&copy; 2024 Tawasol. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
