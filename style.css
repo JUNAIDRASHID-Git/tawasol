@@ -99,6 +99,38 @@
             width: 80%;
         }
         
+        .dropdown-menu {
+            /* hidden by default; Bootstrap will add .show when opened */
+            display: none;
+            min-width: 500px;
+            padding: 1.5rem !important;
+            border: none;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            border-radius: 12px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        /* show dropdown as grid only when Bootstrap toggles it open */
+        .dropdown-menu.show {
+            display: grid;
+        }
+        
+        .dropdown-item {
+            padding: 0.75rem 1rem !important;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--dark) !important;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--light-red) !important;
+            color: var(--primary-red) !important;
+        }
+        
         .btn-primary {
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
             border: none;
@@ -260,6 +292,8 @@
             transition: all 0.3s;
             border: 1px solid #f0f0f0;
             height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .service-card:hover {
@@ -295,6 +329,21 @@
             line-height: 1.6;
         }
         
+        .service-card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .service-card-link:hover {
+            text-decoration: none;
+        }
+
+        /* Hide inline thumbnail images inside service cards (prevents broken image icon showing)
+           Images remain available on individual service pages. */
+        .services .service-card img {
+            display: none;
+        }
+        
         /* Stats Section */
         .stats {
             padding: 4rem 0;
@@ -316,6 +365,95 @@
             font-size: 1.1rem;
             opacity: 0.9;
         }
+
+        /* Ad Trends Section */
+        .team-wall {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 50px rgba(227, 30, 36, 0.15);
+            border-color: var(--primary-red);
+        }
+
+        .team-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--light-red), #FED7D7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover .team-image {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(227, 30, 36, 0.2);
+        }
+
+        .team-image svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .team-role {
+            font-size: 0.9rem;
+            color: var(--primary-red);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .team-tagline {
+            font-size: 1rem;
+            color: var(--gray);
+            font-style: italic;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Stats Section */
         
         /* Clients Section */
         .clients-section {
@@ -428,4 +566,274 @@
             .nav-link {
                 margin: 0.5rem 0;
             }
+        }
+
+        /* WhatsApp Popup Styles */
+        .whatsapp-floating-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .whatsapp-floating-btn:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-floating-btn:active {
+            transform: scale(0.95);
+        }
+
+        .whatsapp-popup {
+            position: fixed;
+            bottom: 5.5rem;
+            right: 2rem;
+            width: 380px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 12px 50px rgba(0, 0, 0, 0.15);
+            display: none;
+            flex-direction: column;
+            max-height: 600px;
+            overflow: hidden;
+            z-index: 1000;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .whatsapp-popup.active {
+            display: flex;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .whatsapp-popup-header {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .whatsapp-popup-title {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .whatsapp-popup-title i {
+            font-size: 1.5rem;
+        }
+
+        .whatsapp-close-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .whatsapp-close-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+
+        .whatsapp-popup-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .whatsapp-greeting {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+
+        .whatsapp-form-group {
+            margin-bottom: 1rem;
+        }
+
+        .whatsapp-form-group input,
+        .whatsapp-form-group select,
+        .whatsapp-form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1.5px solid #E0E0E0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            color: var(--dark);
+        }
+
+        .whatsapp-form-group input::placeholder,
+        .whatsapp-form-group textarea::placeholder {
+            color: #999;
+        }
+
+        .whatsapp-form-group input:focus,
+        .whatsapp-form-group select:focus,
+        .whatsapp-form-group textarea:focus {
+            outline: none;
+            border-color: #25D366;
+            box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+        }
+
+        .whatsapp-form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.8rem center;
+            padding-right: 2.5rem;
+        }
+
+        .whatsapp-send-btn {
+            width: 100%;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .whatsapp-send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-send-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-popup {
+                width: calc(100% - 2rem);
+                right: 1rem;
+                left: auto;
+                bottom: calc(4.5rem + 1rem);
+            }
+
+            .whatsapp-floating-btn {
+                bottom: 1.5rem;
+                right: 1rem;
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+
+            .whatsapp-popup-body {
+                padding: 1.2rem;
+            }
+        }
+        
+        /* Additional responsive fixes */
+        @media (max-width: 992px) {
+            .service-card { min-height: unset; }
+            .service-card img.img-fluid { height: 180px; object-fit: cover; }
+            .billboard-carousel { top: 18%; left: 10%; width: 80%; height: 56%; }
+            .team-image { width: 120px; height: 120px; }
+            .team-card { padding: 1.5rem; }
+            .stat-number { font-size: 2.6rem; }
+            .dropdown-menu { min-width: 360px; grid-template-columns: repeat(2,1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; max-width: 100%; }
+            .billboard-frame { transform: none; }
+            .billboard-carousel { position: relative; top: auto; left: auto; width: 100%; height: auto; margin-top: 1rem; }
+            .billboard-wrapper { padding: 0; }
+            .service-card { padding: 1.5rem; }
+            .service-card img.img-fluid { height: 150px; }
+            .team-image { width: 100px; height: 100px; }
+            .timeline-container { gap: 1rem; }
+            .navbar .nav-link { padding: 0.4rem 0.6rem !important; }
+            .dropdown-menu { min-width: 100%; grid-template-columns: repeat(1,1fr); }
+        }
+
+        /* Improved mobile behavior for dropdowns and responsive images */
+        @media (max-width: 992px) {
+            /* When navbar is collapsed, show dropdowns as normal stacked items */
+            .navbar-collapse .dropdown-menu {
+                position: static !important;
+                display: none;
+                box-shadow: none;
+                background: transparent;
+                padding: 0;
+                margin: 0;
+            }
+
+            .navbar-collapse .dropdown.show > .dropdown-menu {
+                display: block;
+            }
+
+            .navbar-collapse .dropdown-item {
+                padding: 0.6rem 1rem !important;
+                border-radius: 0 !important;
+                color: var(--dark) !important;
+            }
+
+            /* Make service images adapt on smaller screens */
+            .service-image img,
+            .service-card img.img-fluid {
+                height: auto !important;
+                width: 100% !important;
+                object-fit: cover;
+            }
+
+            /* Slightly increase team image on tablet sizes for readability */
+            .team-image { width: 140px; height: 140px; }
+        }
+
+        @media (max-width: 480px) {
+            .service-card img.img-fluid { height: 120px; }
+            .team-image { width: 80px; height: 80px; }
+            .navbar { padding: 0.6rem 0; }
+            .nav-link { font-size: 0.85rem; }
+            .btn.btn-primary { padding: 0.55rem 1rem; font-size: 0.85rem; }
+            .section-title { font-size: 1.6rem; }
+            .hero { min-height: 60vh; }
         }

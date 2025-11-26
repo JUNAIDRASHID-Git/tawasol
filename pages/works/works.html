@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - TAWASOL</title>
+    <title>Works - TAWASOL</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="./contact_style.css">
+    <link rel="stylesheet" href="./works_style.css">
+    <style>
+        /* Small safeguard to keep the page consistent until CSS loads */
+        body{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+    </style>
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Navbar (matches site theme) -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../../index.html">TAWASOL</a>
@@ -37,141 +41,121 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="../about/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../works/works.html">Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./works.html">Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact/contact.html">Contact</a></li>
                     <li class="nav-item ms-lg-3"><button class="btn btn-primary">Get Started</button></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="contact-hero" id="contact">
-        <div class="container" style="position: relative; z-index: 2;">
-            <h1>Get In <span>Touch</span></h1>
-            <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+    <!-- Hero -->
+    <section class="works-hero">
+        <div class="container">
+            <h1>Our <span>Works</span></h1>
+            <p>Selected projects that showcase our craftsmanship and innovative solutions.</p>
         </div>
     </section>
 
-    <!-- Contact Form & Info Section -->
-    <section class="contact-section">
+    <!-- Works Cards -->
+    <section class="works-grid-section">
         <div class="container">
-            <div class="contact-container">
-                <!-- Contact Form -->
-                <div class="contact-form-wrapper">
-                    <h2 class="form-title">Send us a <span>Message</span></h2>
-                    <p class="form-subtitle">Fill out the form below and our team will get back to you shortly.</p>
+            <h2 class="section-title">Project <span>Gallery</span></h2>
 
-                    <div class="alert-custom" id="alertMessage"></div>
-
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
-                                required>
+            <div class="row works-grid gx-4 gy-4">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://via.placeholder.com/900x600?text=Work+1" alt="Work 1">
                         </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="your@email.com" required>
+                        <div class="work-body">
+                            <h5>Retail Signage</h5>
+                            <p class="work-meta">Signage / Installation</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
                         </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" name="phone"
-                                placeholder="+966 XX XXX XXXX">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select class="form-control" id="service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="Vehicle Graphics">Vehicle Graphics</option>
-                                <option value="Printing and Installation">Printing and Installation</option>
-                                <option value="Outdoor Signages">Outdoor Signages</option>
-                                <option value="Indoor Signages">Indoor Signages</option>
-                                <option value="Exhibition Booths">Exhibition Booths</option>
-                                <option value="Corporate Gifts">Corporate Gifts</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea class="form-control" id="message" name="message"
-                                placeholder="Tell us about your project..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="contact-info">
-                    <h2 class="info-title">Contact <span>Information</span></h2>
-
-                    <div class="info-card">
-                        <div class="info-card-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Visit Us</h4>
-                        <p>Dammam, Eastern Province<br>Saudi Arabia</p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-card-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <h4>Call Us</h4>
-                        <p><a href="tel:+966123456789">+966 (12) 345-6789</a></p>
-                        <p style="font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem;">Mon-Fri: 9:00 AM - 6:00
-                            PM<br>Sat-Sun: Closed</p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-card-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h4>Email Us</h4>
-                        <p><a href="mailto:info@tawasol.com">info@tawasol.com</a></p>
-                        <p style="font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem;">We'll respond within 24
-                            hours</p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="info-card-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h4>Business Hours</h4>
-                        <p>Monday - Friday<br>9:00 AM - 6:00 PM<br><br>Emergency Contact Available 24/7</p>
                     </div>
                 </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://via.placeholder.com/900x600?text=Work+2" alt="Work 2">
+                        </div>
+                        <div class="work-body">
+                            <h5>Vehicle Wrap</h5>
+                            <p class="work-meta">Branding / Vehicle Graphics</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://via.placeholder.com/900x600?text=Work+3" alt="Work 3">
+                        </div>
+                        <div class="work-body">
+                            <h5>Exhibition Booth</h5>
+                            <p class="work-meta">Fabrication / Booths</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More placeholder cards (user can replace images later) -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://via.placeholder.com/900x600?text=Work+4" alt="Work 4">
+                        </div>
+                        <div class="work-body">
+                            <h5>Indoor Signage</h5>
+                            <p class="work-meta">Interior / Wayfinding</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://via.placeholder.com/900x600?text=Work+5" alt="Work 5">
+                        </div>
+                        <div class="work-body">
+                            <h5>Corporate Gifts</h5>
+                            <p class="work-meta">Promotional / Merchandise</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="work-card">
+                        <div class="work-thumb">
+                            <img src="https://via.placeholder.com/900x600?text=Work+6" alt="Work 6">
+                        </div>
+                        <div class="work-body">
+                            <h5>Outdoor Billboard</h5>
+                            <p class="work-meta">Large Format / Printing</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container">
-            <h2 class="map-title">Visit Our <span>Location</span></h2>
-            <div class="map-wrapper">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223.27645009100416!2d50.11104181408883!3d26.442084151184595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x827896fd31b16acb%3A0x44e461956c426e60!2sWhite%20Graphics%20Advertising%20Company!5e0!3m2!1sen!2ssa!4v1760812438162!5m2!1sen!2ssa"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer (matches site footer) -->
     <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <h5>TAWASOL</h5>
-                    <p style="color: rgba(255,255,255,0.7);">Connecting brands with audiences through innovative
-                        advertising solutions.</p>
+                    <p style="color: rgba(255,255,255,0.7);">Connecting brands with audiences through innovative advertising solutions.</p>
                     <div class="social-icons mt-3">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -182,26 +166,27 @@
                 <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
                     <h5>Quick Links</h5>
                     <div class="d-flex flex-column">
-                        <a href="#" class="mb-2">Home</a>
-                        <a href="#" class="mb-2">Services</a>
-                        <a href="#" class="mb-2">About Us</a>
-                        <a href="#">Contact</a>
+                        <a href="../../index.html" class="mb-2">Home</a>
+                        <a href="../../index.html#services" class="mb-2">Services</a>
+                        <a href="./works.html" class="mb-2">Works</a>
+                        <a href="../about/about.html" class="mb-2">About Us</a>
+                        <a href="../contact/contact.html">Contact</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
                     <h5>Services</h5>
                     <div class="d-flex flex-column">
-                        <a href="#" class="mb-2">Vehicle Graphics</a>
-                        <a href="#" class="mb-2">Signage Solutions</a>
-                        <a href="#" class="mb-2">Corporate Branding</a>
-                        <a href="#">Exhibition Booths</a>
+                        <a href="#" class="mb-2">Billboard Advertising</a>
+                        <a href="#" class="mb-2">Digital Displays</a>
+                        <a href="#" class="mb-2">Campaign Strategy</a>
+                        <a href="#">Media Planning</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <h5>Contact Info</h5>
                     <p style="color: rgba(255,255,255,0.7);">
                         <i class="fas fa-map-marker-alt me-2"></i>Dammam, Saudi Arabia<br>
-                        <i class="fas fa-phone me-2"></i>+966 (12) 345-6789<br>
+                        <i class="fas fa-phone me-2"></i>+966 XXX XXX XXX<br>
                         <i class="fas fa-envelope me-2"></i>info@tawasol.com
                     </p>
                 </div>
@@ -270,7 +255,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../script.js"></script>
-    <script src="./contact_script.js"></script>
+    <script src="./works_script.js"></script>
 </body>
 
 </html>

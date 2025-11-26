@@ -1,4 +1,7 @@
- // Navbar scroll effect
+ // WhatsApp Configuration
+        const WHATSAPP_NUMBER = '919656591363'; // Your Indian WhatsApp number
+
+        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
@@ -14,6 +17,7 @@
 
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value.trim();
 
@@ -27,8 +31,21 @@
                 return;
             }
 
-            // Simulate form submission
-            alertBox.textContent = '✓ Thank you for reaching out! We will contact you within 24 hours.';
+            // Format message for WhatsApp
+            const whatsappMessage = `*New Contact Form Submission - TAWASOL Website*
+
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone}
+*Service Interested:* ${service}
+*Message:* ${message}`;
+
+            // Create WhatsApp URL and open it
+            const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappURL, '_blank');
+
+            // Show success message
+            alertBox.textContent = '✓ Opening WhatsApp to send your message...';
             alertBox.classList.remove('alert-error');
             alertBox.classList.add('alert-success');
             alertBox.style.display = 'block';
