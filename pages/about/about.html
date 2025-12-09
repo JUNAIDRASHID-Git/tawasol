@@ -56,7 +56,40 @@
 
     <!-- Hero Section -->
     <section class="about-hero" id="about">
+        <!-- Home Page Background (Animated SVG) -->
+        <div class="hero-bg" aria-hidden="true"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+            <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+                style="width: 100%; height: 100%;">
+                <defs>
+                    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fff4f4" />
+                        <stop offset="40%" stop-color="#FEE2E2" />
+                        <stop offset="100%" stop-color="#fff" />
+                    </linearGradient>
+                    <filter id="blurG">
+                        <feGaussianBlur stdDeviation="45" />
+                    </filter>
+                </defs>
+                <g filter="url(#blurG)">
+                    <circle cx="220" cy="200" r="180" fill="#FFDAB9" fill-opacity="0.18">
+                        <animate attributeName="cx" dur="12s" values="180;260;220" repeatCount="indefinite" />
+                        <animate attributeName="cy" dur="16s" values="180;260;200" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="1200" cy="120" r="260" fill="#EAD7B0" fill-opacity="0.12">
+                        <animate attributeName="cx" dur="14s" values="1200;1100;1200" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="980" cy="520" r="220" fill="#F5D0C5" fill-opacity="0.12">
+                        <animate attributeName="cy" dur="18s" values="520;440;520" repeatCount="indefinite" />
+                    </circle>
+                </g>
+                <path d="M0 700 L1600 200 L1600 900 L0 900 Z" fill="url(#bgGrad)" opacity="0.6" />
+            </svg>
+        </div>
+
         <div class="container" style="position: relative; z-index: 2;">
+            <div class="floating-shape shape-1" aria-hidden="true"></div>
+            <div class="floating-shape shape-2" aria-hidden="true"></div>
             <h1>About <span>TAWASOL</span></h1>
             <p>Connecting Brands with Audiences Through Excellence in Advertising</p>
         </div>
@@ -67,72 +100,9 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <div class="image-wrapper">
-                        <svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg" class="about-illustration">
-                            <!-- Building Structure -->
-                            <defs>
-                                <linearGradient id="buildingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#0093E9;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#80D0C7;stop-opacity:1" />
-                                </linearGradient>
-                                <linearGradient id="wallGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#C4906E;stop-opacity:1" />
-                                </linearGradient>
-                            </defs>
-
-                            <!-- Sky Background -->
-                            <rect width="500" height="300" fill="#87CEEB" />
-
-                            <!-- Ground -->
-                            <rect y="300" width="500" height="300" fill="#E8D5C4" />
-
-                            <!-- Building Main -->
-                            <rect x="80" y="150" width="280" height="280" fill="url(#wallGrad)" rx="15" />
-
-                            <!-- Glass Panel Left -->
-                            <rect x="90" y="160" width="120" height="260" fill="url(#buildingGrad)" opacity="0.6"
-                                rx="10" />
-
-                            <!-- Glass Panel Right -->
-                            <rect x="230" y="160" width="120" height="260" fill="#1E90FF" opacity="0.5" rx="10" />
-
-                            <!-- Glass Reflections -->
-                            <rect x="100" y="170" width="100" height="80" fill="white" opacity="0.2" rx="8" />
-                            <rect x="240" y="200" width="100" height="100" fill="white" opacity="0.15" rx="8" />
-
-                            <!-- Door -->
-                            <rect x="190" y="380" width="60" height="90" fill="#3D3D3D" rx="5" />
-                            <circle cx="245" cy="425" r="4" fill="#FFD700" />
-
-                            <!-- Left Support Pole -->
-                            <rect x="70" y="340" width="25" height="100" fill="#8B7355" rx="3" />
-
-                            <!-- Right Support Pole -->
-                            <rect x="410" y="340" width="25" height="100" fill="#8B7355" rx="3" />
-
-                            <!-- Top Lights/Signs -->
-                            <circle cx="150" cy="140" r="8" fill="#FFD700" opacity="0.9">
-                                <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s"
-                                    repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="250" cy="135" r="8" fill="#E31E24" opacity="0.9">
-                                <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.5s"
-                                    repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="350" cy="140" r="8" fill="#FFD700" opacity="0.9">
-                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.2s"
-                                    repeatCount="indefinite" />
-                            </circle>
-
-                            <!-- Signage Lines -->
-                            <line x1="120" y1="125" x2="180" y2="125" stroke="#E31E24" stroke-width="3" opacity="0.7" />
-                            <line x1="220" y1="125" x2="280" y2="125" stroke="#E31E24" stroke-width="3" opacity="0.7" />
-                            <line x1="320" y1="125" x2="380" y2="125" stroke="#E31E24" stroke-width="3" opacity="0.7" />
-
-                            <!-- Shadow -->
-                            <ellipse cx="250" cy="410" rx="150" ry="15" fill="rgba(0,0,0,0.1)" />
-                        </svg>
+                    <div class="image-wrapper" style="padding: 0; overflow: hidden;">
+                        <img src="../../pages/Galary/pic 2.jpg" alt="About Tawasol" class="about-illustration"
+                            style="width: 100%; height: auto; object-fit: cover; border-radius: 20px;">
                     </div>
                 </div>
 
@@ -245,80 +215,82 @@
 
     <!-- Our Process Timeline Section -->
     <section class="process-timeline">
-        <div class="container">
-            <h2 class="section-title">Our <span>Process</span> Timeline</h2>
+        <div class="container-fluid overflow-hidden">
+            <h2 class="section-title text-center">Our <span>Process</span> Timeline</h2>
             <p class="section-sub text-center" style="color:var(--gray);margin-bottom:3rem;">From concept to completion,
                 we follow a proven methodology</p>
 
-            <div class="timeline-container">
-                <!-- Step 1: Research -->
-                <div class="timeline-step">
-                    <div class="step-number">01</div>
-                    <div class="step-icon">
-                        <i class="fas fa-magnifying-glass"></i>
+            <div class="timeline-marquee">
+                <div class="timeline-track">
+                    <!-- Step 1: Research -->
+                    <div class="timeline-step">
+                        <div class="step-number">01</div>
+                        <div class="step-icon"><i class="fas fa-magnifying-glass"></i></div>
+                        <h3>Research</h3>
+                        <p>Deep dive into market analysis, competitor research, and audience insights.</p>
                     </div>
-                    <h3>Research</h3>
-                    <p>Deep dive into market analysis, competitor research, and audience insights.</p>
-                </div>
+                    <!-- Arrow -->
+                    <div class="timeline-arrow"><i class="fas fa-arrow-right"></i></div>
 
-                <!-- Arrow -->
-                <div class="timeline-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-
-                <!-- Step 2: Concept -->
-                <div class="timeline-step">
-                    <div class="step-number">02</div>
-                    <div class="step-icon">
-                        <i class="fas fa-lightbulb"></i>
+                    <!-- Step 2: Concept -->
+                    <div class="timeline-step">
+                        <div class="step-number">02</div>
+                        <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Concept</h3>
+                        <p>Strategic planning and ideation to shape your brand narrative.</p>
                     </div>
-                    <h3>Concept</h3>
-                    <p>Strategic planning and ideation to shape your brand narrative.</p>
-                </div>
+                    <!-- Arrow -->
+                    <div class="timeline-arrow"><i class="fas fa-arrow-right"></i></div>
 
-                <!-- Arrow -->
-                <div class="timeline-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-
-                <!-- Step 3: Design -->
-                <div class="timeline-step">
-                    <div class="step-number">03</div>
-                    <div class="step-icon">
-                        <i class="fas fa-pen-fancy"></i>
+                    <!-- Step 3: Design -->
+                    <div class="timeline-step">
+                        <div class="step-number">03</div>
+                        <div class="step-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <h3>Design</h3>
+                        <p>Creative execution with stunning visuals and compelling messaging.</p>
                     </div>
-                    <h3>Design</h3>
-                    <p>Creative execution with stunning visuals and compelling messaging.</p>
-                </div>
+                    <!-- Arrow -->
+                    <div class="timeline-arrow"><i class="fas fa-arrow-right"></i></div>
 
-                <!-- Arrow -->
-                <div class="timeline-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-
-                <!-- Step 4: Execution -->
-                <div class="timeline-step">
-                    <div class="step-number">04</div>
-                    <div class="step-icon">
-                        <i class="fas fa-rocket"></i>
+                    <!-- Step 4: Execution -->
+                    <div class="timeline-step">
+                        <div class="step-number">04</div>
+                        <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Execution</h3>
+                        <p>Perfect implementation with precision and quality assurance.</p>
                     </div>
-                    <h3>Execution</h3>
-                    <p>Perfect implementation with precision and quality assurance.</p>
-                </div>
+                    <!-- Arrow -->
+                    <div class="timeline-arrow"><i class="fas fa-arrow-right"></i></div>
 
-                <!-- Arrow -->
-                <div class="timeline-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-
-                <!-- Step 5: Performance Review -->
-                <div class="timeline-step">
-                    <div class="step-number">05</div>
-                    <div class="step-icon">
-                        <i class="fas fa-chart-line"></i>
+                    <!-- Step 5: Performance Review -->
+                    <div class="timeline-step">
+                        <div class="step-number">05</div>
+                        <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Review</h3>
+                        <p>Detailed analytics and insights to measure campaign success.</p>
                     </div>
-                    <h3>Performance Review</h3>
-                    <p>Detailed analytics and insights to measure campaign success.</p>
+                    <!-- Arrow -->
+                    <div class="timeline-arrow"><i class="fas fa-arrow-right"></i></div>
+
+                    <!-- Duplicated Content for Seamless Scroll -->
+                    <!-- Step 1 Duplicate -->
+                    <div class="timeline-step">
+                        <div class="step-number">01</div>
+                        <div class="step-icon"><i class="fas fa-magnifying-glass"></i></div>
+                        <h3>Research</h3>
+                        <p>Deep dive into market analysis, competitor research, and audience insights.</p>
+                    </div>
+                    <!-- Arrow -->
+                    <div class="timeline-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <!-- Step 2 Duplicate -->
+                    <div class="timeline-step">
+                        <div class="step-number">02</div>
+                        <div class="step-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Concept</h3>
+                        <p>Strategic planning and ideation to shape your brand narrative.</p>
+                    </div>
+                    <!-- Arrow -->
+                    <div class="timeline-arrow"><i class="fas fa-arrow-right"></i></div>
                 </div>
             </div>
         </div>

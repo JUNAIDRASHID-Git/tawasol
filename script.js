@@ -15,8 +15,8 @@ const navLinks = document.querySelectorAll('.nav-link');
 window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
+        if (!section) return;
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (window.pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
@@ -30,14 +30,15 @@ window.addEventListener('scroll', () => {
     });
 });
 
-
-
-// Auto-rotate clients carousel
-const carousel = new bootstrap.Carousel(document.getElementById('clientsCarousel'), {
-    interval: 3000,
-    wrap: true,
-    ride: 'carousel'
-});
+// Auto-rotate clients carousel (if present)
+const clientsCarousel = document.getElementById('clientsCarousel');
+if (clientsCarousel) {
+    const carousel = new bootstrap.Carousel(clientsCarousel, {
+        interval: 3000,
+        wrap: true,
+        ride: 'carousel'
+    });
+}
 
 // WhatsApp Configuration
 const WHATSAPP_NUMBER = '919037581163'; // Indian WhatsApp number
@@ -45,12 +46,12 @@ const WHATSAPP_NUMBER = '919037581163'; // Indian WhatsApp number
 // WhatsApp Popup Functions
 function openWhatsAppPopup() {
     const popup = document.getElementById('whatsappPopup');
-    popup.classList.add('active');
+    if (popup) popup.classList.add('active');
 }
 
 function closeWhatsAppPopup() {
     const popup = document.getElementById('whatsappPopup');
-    popup.classList.remove('active');
+    if (popup) popup.classList.remove('active');
 }
 
 function sendWhatsAppMessage(event) {
@@ -87,17 +88,14 @@ document.addEventListener('click', function (event) {
     const popup = document.getElementById('whatsappPopup');
     const floatingBtn = document.querySelector('.whatsapp-floating-btn');
 
-    if (!popup.contains(event.target) && !floatingBtn.contains(event.target) && popup.classList.contains('active')) {
+    if (popup && floatingBtn && !popup.contains(event.target) && !floatingBtn.contains(event.target) && popup.classList.contains('active')) {
         closeWhatsAppPopup();
     }
 });
 
 // Close any open Bootstrap dropdowns when clicking outside (extra safety)
 document.addEventListener('click', function (event) {
-    // if the click happened inside any dropdown, do nothing
     if (event.target.closest('.dropdown')) return;
-
-    // otherwise hide any open dropdowns
     document.querySelectorAll('.dropdown.show').forEach(function (drop) {
         const toggle = drop.querySelector('[data-bs-toggle="dropdown"]');
         if (toggle) {
@@ -109,4 +107,45 @@ document.addEventListener('click', function (event) {
             if (menu) menu.classList.remove('show');
         }
     });
+});
+
+// Stats Counter Animation
+function animateCounters() {
+    const stats = document.querySelectorAll('.stat-number');
+
+    if (!('IntersectionObserver' in window)) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const valueText = target.innerText;
+                const value = parseInt(valueText.replace(/[^0-9]/g, ''));
+                const suffix = valueText.replace(/[0-9]/g, '');
+
+                if (isNaN(value)) return;
+
+                let current = 0;
+                const increment = Math.ceil(value / 50);
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= value) {
+                        target.innerText = value + suffix;
+                        clearInterval(timer);
+                    } else {
+                        target.innerText = current + suffix;
+                    }
+                }, 30);
+
+                observer.unobserve(target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    stats.forEach(stat => observer.observe(stat));
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    animateCounters();
 });
