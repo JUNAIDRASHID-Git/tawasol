@@ -22,142 +22,128 @@
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                         <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="./pages/services/tags-name-plates.html">Tags & Name Plates</a></li>
-                            <li><a class="dropdown-item" href="./pages/services/printing-installation.html">Printing & Installation</a></li>
-                            <li><a class="dropdown-item" href="./pages/services/vehicle-graphics.html">Vehicle Graphics</a></li>
+                            <li><a class="dropdown-item" href="./pages/services/tags-name-plates.html">Tags & Name
+                                    Plates</a></li>
+                            <li><a class="dropdown-item" href="./pages/services/printing-installation.html">Printing &
+                                    Installation</a></li>
+                            <li><a class="dropdown-item" href="./pages/services/vehicle-graphics.html">Vehicle
+                                    Graphics</a></li>
                             <li><a class="dropdown-item" href="./pages/services/safety-signs.html">Safety Signs</a></li>
-                            <li><a class="dropdown-item" href="./pages/services/exhibition-booths.html">Exhibition Booths</a></li>
-                            <li><a class="dropdown-item" href="./pages/services/indoor-signages.html">Indoor Signages</a></li>
-                            <li><a class="dropdown-item" href="./pages/services/outdoor-signages.html">Outdoor Signages</a></li>
-                            <li><a class="dropdown-item" href="./pages/services/corporate-gifts.html">Corporate Gifts</a></li>
-                            <li><a class="dropdown-item" href="./pages/services/corporate-identity.html">Corporate Identity</a></li>
+                            <li><a class="dropdown-item" href="./pages/services/exhibition-booths.html">Exhibition
+                                    Booths</a></li>
+                            <li><a class="dropdown-item" href="./pages/services/indoor-signages.html">Indoor
+                                    Signages</a></li>
+                            <li><a class="dropdown-item" href="./pages/services/outdoor-signages.html">Outdoor
+                                    Signages</a></li>
+                            <li><a class="dropdown-item" href="./pages/services/corporate-gifts.html">Corporate
+                                    Gifts</a></li>
+                            <li><a class="dropdown-item" href="./pages/services/corporate-identity.html">Corporate
+                                    Identity</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="./pages/about/about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="./pages/works/works.html">Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/contact/contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><button class="btn btn-primary">Get Started</button></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary"
+                            href="./pages/contact/contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero special-hero" id="home">
+        <!-- Decorative animated SVG background (behind content) -->
+        <div class="hero-bg" aria-hidden="true">
+            <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fff4f4" />
+                        <stop offset="40%" stop-color="#FEE2E2" />
+                        <stop offset="100%" stop-color="#fff" />
+                    </linearGradient>
+                    <filter id="blurG">
+                        <feGaussianBlur stdDeviation="45" />
+                    </filter>
+                </defs>
+
+                <!-- Large soft radial blobs -->
+                <g filter="url(#blurG)">
+                    <circle cx="220" cy="200" r="180" fill="#FFDAB9" fill-opacity="0.18">
+                        <animate attributeName="cx" dur="12s" values="180;260;220" repeatCount="indefinite" />
+                        <animate attributeName="cy" dur="16s" values="180;260;200" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="1200" cy="120" r="260" fill="#EAD7B0" fill-opacity="0.12">
+                        <animate attributeName="cx" dur="14s" values="1200;1100;1200" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="980" cy="520" r="220" fill="#F5D0C5" fill-opacity="0.12">
+                        <animate attributeName="cy" dur="18s" values="520;440;520" repeatCount="indefinite" />
+                    </circle>
+                </g>
+
+                <!-- Subtle diagonal pattern path -->
+                <path d="M0 700 L1600 200 L1600 900 L0 900 Z" fill="url(#bgGrad)" opacity="0.6" />
+            </svg>
+        </div>
+
         <div class="container">
-            <div class="row align-items-center">
+            <div class="floating-shape shape-1" aria-hidden="true"></div>
+            <div class="floating-shape shape-2" aria-hidden="true"></div>
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6 hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text">✨ Premium Advertising Solutions</span>
+                    </div>
                     <h1>
-                        Your Advertising
-                        <span>Experts</span>
+                        Transform Your Brand Into
+                        <span>Market Leader</span>
                     </h1>
-                    <p>We transform brands through captivating visuals and expert advertising, making your brand
-                        unforgettable. Narratives and design solutions that set you apart in the world of advertising.
-                    </p>
-                    <button class="btn btn-primary btn-lg me-3 mb-2">Start Campaign</button>
-                    <button class="btn btn-outline-dark btn-lg mb-2">View Portfolio</button>
+                    <p class="hero-subtitle">We turn creative visions into powerful campaigns with cutting-edge design,
+                        strategic placement, and measurable impact across all advertising channels.</p>
+
+                    <!-- Feature Pills -->
+                    <div class="feature-pills mb-4">
+                        <span class="pill"><i class="fas fa-check-circle"></i> 250+ Active Campaigns</span>
+                        <span class="pill"><i class="fas fa-check-circle"></i> 500+ Happy Clients</span>
+                        <span class="pill"><i class="fas fa-check-circle"></i> 99% Satisfaction</span>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg"><i class="fas fa-rocket me-2"></i>Start Campaign</button>
+                        <button class="btn btn-outline-primary btn-lg"><i class="fas fa-play-circle me-2"></i>Watch
+                            Demo</button>
+                    </div>
                 </div>
-                <div class="col-lg-6 billboard-container">
-                    <div class="billboard-wrapper">
-                        <!-- Billboard Frame -->
-                        <svg class="billboard-frame" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Billboard Structure -->
-                            <rect x="50" y="80" width="500" height="280" rx="10" fill="#1A1A1A" />
 
-                            <!-- Billboard Lights -->
-                            <circle cx="100" cy="90" r="5" fill="#FFD700" opacity="0.8">
-                                <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s"
-                                    repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="200" cy="90" r="5" fill="#FFD700" opacity="0.8">
-                                <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2.5s"
-                                    repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="400" cy="90" r="5" fill="#FFD700" opacity="0.8">
-                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.2s"
-                                    repeatCount="indefinite" />
-                            </circle>
-                            <circle cx="500" cy="90" r="5" fill="#FFD700" opacity="0.8">
-                                <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.8s"
-                                    repeatCount="indefinite" />
-                            </circle>
+                <div class="col-lg-6">
+                    <!-- Hero Banner -->
+                    <div class="hero-banner full-bleed">
+                        <img src="./pages/Galary/pic 1.avif" alt="Campaign Banner">
+                        <div class="banner-overlay">
+                            <h3>Strategic Outdoor Campaigns</h3>
+                            <p>Large format, high-impact installations that drive real-world results.</p>
+                            <a class="btn btn-outline-dark btn-lg" href="./pages/works/works.html">See Case Studies</a>
+                        </div>
+                    </div>
 
-                            <!-- Support Poles -->
-                            <rect x="150" y="360" width="15" height="40" fill="#4B5563" />
-                            <rect x="435" y="360" width="15" height="40" fill="#4B5563" />
-
-                            <!-- Ground -->
-                            <ellipse cx="300" cy="395" rx="120" ry="8" fill="#D1D5DB" opacity="0.3" />
-                        </svg>
-
-                        <!-- Billboard Content Carousel -->
-                        <div id="billboardCarousel" class="carousel slide billboard-carousel" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="billboard-content">
-                                        <svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg">
-                                            <defs>
-                                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                    <stop offset="0%" style="stop-color:#E31E24;stop-opacity:1" />
-                                                    <stop offset="100%" style="stop-color:#B91C1C;stop-opacity:1" />
-                                                </linearGradient>
-                                            </defs>
-                                            <rect width="460" height="240" fill="url(#grad1)" />
-                                            <text x="230" y="100" font-size="42" font-weight="bold" fill="white"
-                                                text-anchor="middle">PREMIUM</text>
-                                            <text x="230" y="140" font-size="38" font-weight="bold" fill="white"
-                                                text-anchor="middle">BRANDS</text>
-                                            <text x="230" y="180" font-size="18" fill="#FEE2E2"
-                                                text-anchor="middle">Your Vision, Our Mission</text>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="billboard-content">
-                                        <svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="460" height="240" fill="#1A1A1A" />
-                                            <circle cx="230" cy="80" r="40" fill="#E31E24" opacity="0.2" />
-                                            <circle cx="230" cy="80" r="30" fill="#E31E24" opacity="0.4" />
-                                            <circle cx="230" cy="80" r="20" fill="#E31E24" />
-                                            <text x="230" y="150" font-size="36" font-weight="bold" fill="white"
-                                                text-anchor="middle">DIGITAL</text>
-                                            <text x="230" y="185" font-size="32" font-weight="bold" fill="#E31E24"
-                                                text-anchor="middle">IMPACT</text>
-                                            <rect x="100" y="200" width="60" height="4" fill="#E31E24" />
-                                            <rect x="180" y="200" width="100" height="4" fill="#E31E24" />
-                                            <rect x="300" y="200" width="60" height="4" fill="#E31E24" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="billboard-content">
-                                        <svg viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg">
-                                            <defs>
-                                                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
-                                                    <stop offset="0%" style="stop-color:#B91C1C;stop-opacity:1" />
-                                                    <stop offset="50%" style="stop-color:#E31E24;stop-opacity:1" />
-                                                    <stop offset="100%" style="stop-color:#B91C1C;stop-opacity:1" />
-                                                </linearGradient>
-                                            </defs>
-                                            <rect width="460" height="240" fill="url(#grad2)" />
-                                            <polygon points="230,40 260,100 200,100" fill="white" opacity="0.9" />
-                                            <text x="230" y="150" font-size="40" font-weight="bold" fill="white"
-                                                text-anchor="middle">REACH</text>
-                                            <text x="230" y="190" font-size="28" font-weight="600" fill="#FEE2E2"
-                                                text-anchor="middle">MILLIONS DAILY</text>
-                                            <circle cx="80" cy="200" r="15" fill="white" opacity="0.3" />
-                                            <circle cx="380" cy="200" r="15" fill="white" opacity="0.3" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Floating Stats Cards (moved below banner) -->
+                    <!-- <div class="floating-stat-card card-1">
+                        <div class="stat-card-content">
+                            <h4>15+</h4>
+                            <p>Cities Covered</p>
+                        </div>
+                    </div>
+                    <div class="floating-stat-card card-2">
+                        <div class="stat-card-content">
+                            <h4>250+</h4>
+                            <p>Billboards</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <!-- service section -->
@@ -209,7 +195,8 @@
                                 <i class="fas fa-car"></i>
                             </div>
                             <h3>Vehicle Graphics</h3>
-                            <p>Full and partial wraps, vinyl cut graphics, printed graphics, and stencil work lettering for
+                            <p>Full and partial wraps, vinyl cut graphics, printed graphics, and stencil work lettering
+                                for
                                 any vehicle type.</p>
                         </div>
                     </a>
@@ -225,7 +212,8 @@
                                 <i class="fas fa-exclamation-triangle"></i>
                             </div>
                             <h3>Safety Signs</h3>
-                            <p>Road signs, caution signs, wall posters, PPE and safety wear brandings to promote workplace
+                            <p>Road signs, caution signs, wall posters, PPE and safety wear brandings to promote
+                                workplace
                                 safety and awareness.</p>
                         </div>
                     </a>
@@ -235,8 +223,8 @@
                 <div class="col-lg-4 col-md-6">
                     <a class="service-card-link" href="./pages/services/exhibition-booths.html">
                         <div class="service-card">
-                            <img src="https://via.placeholder.com/400x200?text=Exhibition+Booths" alt="Exhibition Booths"
-                                class="img-fluid mb-3 rounded">
+                            <img src="https://via.placeholder.com/400x200?text=Exhibition+Booths"
+                                alt="Exhibition Booths" class="img-fluid mb-3 rounded">
                             <div class="service-icon">
                                 <i class="fas fa-store-alt"></i>
                             </div>
@@ -257,7 +245,8 @@
                                 <i class="fas fa-sign"></i>
                             </div>
                             <h3>Indoor Signages</h3>
-                            <p>Lobby and directional signs, wall wraps, interior banners, hanging signs, floor graphics, and
+                            <p>Lobby and directional signs, wall wraps, interior banners, hanging signs, floor graphics,
+                                and
                                 emergency exit signage.</p>
                         </div>
                     </a>
@@ -299,13 +288,14 @@
                 <div class="col-lg-4 col-md-6">
                     <a class="service-card-link" href="./pages/services/corporate-identity.html">
                         <div class="service-card">
-                            <img src="https://via.placeholder.com/400x200?text=Corporate+Identity" alt="Corporate Identity"
-                                class="img-fluid mb-3 rounded">
+                            <img src="https://via.placeholder.com/400x200?text=Corporate+Identity"
+                                alt="Corporate Identity" class="img-fluid mb-3 rounded">
                             <div class="service-icon">
                                 <i class="fas fa-briefcase"></i>
                             </div>
                             <h3>Corporate Identity</h3>
-                            <p>Letterheads, brochures, business cards, flyers, magazines, diaries, calendars, and branded
+                            <p>Letterheads, brochures, business cards, flyers, magazines, diaries, calendars, and
+                                branded
                                 stationery materials.</p>
                         </div>
                     </a>
@@ -583,7 +573,7 @@
                     <p style="color: rgba(255,255,255,0.7);">
                         <i class="fas fa-map-marker-alt me-2"></i>Dammam, Saudi Arabia<br>
                         <i class="fas fa-phone me-2"></i>+966 XXX XXX XXX<br>
-                        <i class="fas fa-envelope me-2"></i>info@tawasol.com
+                        <i class="fas fa-envelope me-2"></i>fathimaansal81@gmail.com
                     </p>
                 </div>
             </div>
@@ -615,7 +605,7 @@
             <!-- Popup Body -->
             <div class="whatsapp-popup-body">
                 <p class="whatsapp-greeting">Hi! 👋 How can we help you today?</p>
-                
+
                 <form id="whatsappForm" onsubmit="sendWhatsAppMessage(event)">
                     <div class="whatsapp-form-group">
                         <input type="text" id="waName" placeholder="Your Name" required>
@@ -641,7 +631,8 @@
                         </select>
                     </div>
                     <div class="whatsapp-form-group">
-                        <textarea id="waMessage" placeholder="Tell us more about your project..." rows="3" required></textarea>
+                        <textarea id="waMessage" placeholder="Tell us more about your project..." rows="3"
+                            required></textarea>
                     </div>
                     <button type="submit" class="whatsapp-send-btn">
                         <i class="fab fa-whatsapp"></i> Send via WhatsApp
