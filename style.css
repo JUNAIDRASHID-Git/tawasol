@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'raleway';
     overflow-x: hidden;
     color: var(--dark);
 }
@@ -670,26 +670,34 @@ body {
     overflow: hidden;
 }
 
+/* Logo container */
 .client-logo {
-    padding: 1.5rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
+    width: 220px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.8;
-    transition: opacity 0.3s;
 }
 
-.client-logo:hover svg {
+/* Logo image */
+.client-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.client-logo:hover img {
     opacity: 1;
+    transform: scale(1.05);
 }
 
+/* Carousel smooth transition */
 .carousel-item {
     transition: transform 0.8s ease-in-out;
 }
+
 
 /* Footer */
 .footer {
