@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Works - TAWASOL</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>أعمالنا - تواصل</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../style-rtl.css">
     <link rel="stylesheet" href="./works_style.css">
     <style>
         /* Small safeguard to keep the page consistent until CSS loads */
@@ -19,44 +20,46 @@
 
 <body>
     <!-- Navbar (matches site theme) -->
+    <!-- Navbar (matches site theme) -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="../../index.html">
-                <img src="../../assets/TAWASOL_Logo.png" alt="TAWASOL">
+                <img src="../../../assets/TAWASOL_Logo.png" alt="تواصل">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="../../index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html#home">الرئيسية</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            data-bs-toggle="dropdown" aria-expanded="false">خدماتنا</a>
                         <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="../services/tags-name-plates.html">Tags & Name Plates</a>
+                            <li><a class="dropdown-item" href="../services/tags-name-plates.html">العلامات واللوحات
+                                    الاسمية</a></li>
+                            <li><a class="dropdown-item" href="../services/printing-installation.html">الطباعة
+                                    والتركيب</a></li>
+                            <li><a class="dropdown-item" href="../services/vehicle-graphics.html">رسومات المركبات</a>
                             </li>
-                            <li><a class="dropdown-item" href="../services/printing-installation.html">Printing &
-                                    Installation</a></li>
-                            <li><a class="dropdown-item" href="../services/vehicle-graphics.html">Vehicle Graphics</a>
+                            <li><a class="dropdown-item" href="../services/safety-signs.html">لوحات السلامة</a></li>
+                            <li><a class="dropdown-item" href="../services/exhibition-booths.html">أجـنحة المعـارض</a>
                             </li>
-                            <li><a class="dropdown-item" href="../services/safety-signs.html">Safety Signs</a></li>
-                            <li><a class="dropdown-item" href="../services/exhibition-booths.html">Exhibition Booths</a>
+                            <li><a class="dropdown-item" href="../services/indoor-signages.html">اللوحات الداخلية</a>
                             </li>
-                            <li><a class="dropdown-item" href="../services/indoor-signages.html">Indoor Signages</a>
+                            <li><a class="dropdown-item" href="../services/outdoor-signages.html">اللوحات الخارجية</a>
                             </li>
-                            <li><a class="dropdown-item" href="../services/outdoor-signages.html">Outdoor Signages</a>
+                            <li><a class="dropdown-item" href="../services/corporate-gifts.html">الهدايا الإعلانية</a>
                             </li>
-                            <li><a class="dropdown-item" href="../services/corporate-gifts.html">Corporate Gifts</a>
+                            <li><a class="dropdown-item" href="../services/corporate-identity.html">هوية الشركات</a>
                             </li>
-                            <li><a class="dropdown-item" href="../services/corporate-identity.html">Corporate
-                                    Identity</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../about/about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./works.html">Works</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-primary" href="../contact/contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../about/about.html">من نحن</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./works.html">أعمالنا</a></li>
+                    <li class="nav-item ms-lg-3"><a class="btn btn-primary" href="../contact/contact.html">تواصل
+                            معنا</a></li>
+
                 </ul>
             </div>
         </div>
@@ -65,15 +68,15 @@
     <!-- Hero -->
     <section class="works-hero">
         <div class="container">
-            <h1>Our <span>Works</span></h1>
-            <p>Selected projects that showcase our craftsmanship and innovative solutions.</p>
+            <h1>أهم <span>أعمالنا</span></h1>
+            <p>مشاريع مختارة تعرض براعتنا وحلولنا المبتكرة.</p>
         </div>
     </section>
 
     <!-- Works Cards -->
     <section class="works-grid-section">
         <div class="container">
-            <h2 class="section-title">Project <span>Gallery</span></h2>
+            <h2 class="section-title">معرض <span>المشاريع</span></h2>
 
             <div class="row works-grid gx-4 gy-4">
                 <!-- Card 1 -->
@@ -83,12 +86,12 @@
                             <div id="carouselRetail" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="../../assets/RetailSignage/retail.signage.jpg" class="d-block w-100"
-                                            alt="Retail Signage 1">
+                                        <img src="../../../assets/RetailSignage/retail.signage.jpg"
+                                            class="d-block w-100" alt="Retail Signage 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../../assets/RetailSignage/retail.signage2.jpg" class="d-block w-100"
-                                            alt="Retail Signage 2">
+                                        <img src="../../../assets/RetailSignage/retail.signage2.jpg"
+                                            class="d-block w-100" alt="Retail Signage 2">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselRetail"
@@ -104,9 +107,9 @@
                             </div>
                         </div>
                         <div class="work-body">
-                            <h5>Retail Signage</h5>
-                            <p class="work-meta">Signage / Installation</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                            <h5>لوحات المحلات التجارية</h5>
+                            <p class="work-meta">لوحات / تركيب</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -115,12 +118,12 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="work-card">
                         <div class="work-thumb">
-                            <img src="../../assets/VehicleGraphics/vehicle.graphics.jpg" alt="Vehicle Wrap Project">
+                            <img src="../../../assets/VehicleGraphics/vehicle.graphics.jpg" alt="Vehicle Wrap Project">
                         </div>
                         <div class="work-body">
-                            <h5>Vehicle Wrap</h5>
-                            <p class="work-meta">Branding / Vehicle Graphics</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                            <h5>تغليف المركبات</h5>
+                            <p class="work-meta">هوية / رسومات مركبات</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -132,15 +135,15 @@
                             <div id="carouselBooth" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="../../assets/ExhibitionBooth/exhibition.booth.jpg"
+                                        <img src="../../../assets/ExhibitionBooth/exhibition.booth.jpg"
                                             class="d-block w-100" alt="Exhibition Booth 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../../assets/ExhibitionBooth/exhibition.booth2.jpg"
+                                        <img src="../../../assets/ExhibitionBooth/exhibition.booth2.jpg"
                                             class="d-block w-100" alt="Exhibition Booth 2">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../../assets/ExhibitionBooth/exhibition.booth3.jpg"
+                                        <img src="../../../assets/ExhibitionBooth/exhibition.booth3.jpg"
                                             class="d-block w-100" alt="Exhibition Booth 3">
                                     </div>
                                 </div>
@@ -157,9 +160,9 @@
                             </div>
                         </div>
                         <div class="work-body">
-                            <h5>Exhibition Booth</h5>
-                            <p class="work-meta">Fabrication / Booths</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                            <h5>أجـنحة المعـارض</h5>
+                            <p class="work-meta">تصنيع / أجنحة</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -171,20 +174,20 @@
                             <div id="carouselIndoor" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="../../assets/IndoorSignage/indoor.signage.jpg" class="d-block w-100"
-                                            alt="Indoor Signage 1">
+                                        <img src="../../../assets/IndoorSignage/indoor.signage.jpg"
+                                            class="d-block w-100" alt="Indoor Signage 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../../assets/IndoorSignage/indoor.signage2.jpg" class="d-block w-100"
-                                            alt="Indoor Signage 2">
+                                        <img src="../../../assets/IndoorSignage/indoor.signage2.jpg"
+                                            class="d-block w-100" alt="Indoor Signage 2">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../../assets/IndoorSignage/indoor.signage3.jpg" class="d-block w-100"
-                                            alt="Indoor Signage 3">
+                                        <img src="../../../assets/IndoorSignage/indoor.signage3.jpg"
+                                            class="d-block w-100" alt="Indoor Signage 3">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../../assets/IndoorSignage/indoor.signage4.jpg" class="d-block w-100"
-                                            alt="Indoor Signage 4">
+                                        <img src="../../../assets/IndoorSignage/indoor.signage4.jpg"
+                                            class="d-block w-100" alt="Indoor Signage 4">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndoor"
@@ -200,9 +203,9 @@
                             </div>
                         </div>
                         <div class="work-body">
-                            <h5>Indoor Signage</h5>
-                            <p class="work-meta">Interior / Wayfinding</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                            <h5>اللوحات الداخلية</h5>
+                            <p class="work-meta">داخلي / إرشادية</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -210,12 +213,12 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="work-card">
                         <div class="work-thumb">
-                            <img src="../../assets/CorporateGifts/corporate.gifts.jpg" alt="Corporate Gifts Project">
+                            <img src="../../../assets/CorporateGifts/corporate.gifts.jpg" alt="Corporate Gifts Project">
                         </div>
                         <div class="work-body">
-                            <h5>Corporate Gifts</h5>
-                            <p class="work-meta">Promotional / Merchandise</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                            <h5>الهدايا الإعلانية</h5>
+                            <p class="work-meta">ترويجي / هدايا</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -226,15 +229,15 @@
                             <div id="carouselOutdoor" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="../../assets/OutdoorBillboard/outdoor.billboard.jpg"
+                                        <img src="../../../assets/OutdoorBillboard/outdoor.billboard.jpg"
                                             class="d-block w-100" alt="Outdoor Billboard 1">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../../assets/OutdoorBillboard/outdoor.billboard2.jpg"
+                                        <img src="../../../assets/OutdoorBillboard/outdoor.billboard2.jpg"
                                             class="d-block w-100" alt="Outdoor Billboard 2">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../../assets/OutdoorBillboard/outdoor.billboard3.jpg"
+                                        <img src="../../../assets/OutdoorBillboard/outdoor.billboard3.jpg"
                                             class="d-block w-100" alt="Outdoor Billboard 3">
                                     </div>
                                 </div>
@@ -251,9 +254,9 @@
                             </div>
                         </div>
                         <div class="work-body">
-                            <h5>Outdoor Billboard</h5>
-                            <p class="work-meta">Large Format / Printing</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">View Details</a>
+                            <h5>لوحات الطرق الخارجية</h5>
+                            <p class="work-meta">طباعة كبيرة / طباعة</p>
+                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -267,9 +270,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5>TAWASOL</h5>
-                    <p style="color: rgba(255,255,255,0.7);">Connecting brands with audiences through innovative
-                        advertising solutions.</p>
+                    <h5>تواصل</h5>
+                    <p style="color: rgba(255,255,255,0.7);">ربط العلامات التجارية بالجماهير من خلال حلول إعلانية
+                        مبتكرة.</p>
                     <div class="social-icons mt-3">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -278,28 +281,28 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 mb-4 mb-lg-0">
-                    <h5>Quick Links</h5>
+                    <h5>روابط سريعة</h5>
                     <div class="d-flex flex-column">
-                        <a href="../../index.html" class="mb-2">Home</a>
-                        <a href="../../index.html#services" class="mb-2">Services</a>
-                        <a href="./works.html" class="mb-2">Works</a>
-                        <a href="../about/about.html" class="mb-2">About Us</a>
-                        <a href="../contact/contact.html">Contact</a>
+                        <a href="../../index.html" class="mb-2">الرئيسية</a>
+                        <a href="../../index.html#services" class="mb-2">خدماتنا</a>
+                        <a href="./works.html" class="mb-2">أعمالنا</a>
+                        <a href="../about/about.html" class="mb-2">من نحن</a>
+                        <a href="../contact/contact.html">تواصل معنا</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
-                    <h5>Services</h5>
+                    <h5>خدماتنا</h5>
                     <div class="d-flex flex-column">
-                        <a href="#" class="mb-2">Billboard Advertising</a>
-                        <a href="#" class="mb-2">Digital Displays</a>
-                        <a href="#" class="mb-2">Campaign Strategy</a>
-                        <a href="#">Media Planning</a>
+                        <a href="#" class="mb-2">إعلانات الطرق</a>
+                        <a href="#" class="mb-2">شاشات رقمية</a>
+                        <a href="#" class="mb-2">استراتيجية الحملات</a>
+                        <a href="#">تخطيط إعلامي</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
-                    <h5>Contact Info</h5>
+                    <h5>معلومات التواصل</h5>
                     <p style="color: rgba(255,255,255,0.7);">
-                        <i class="fas fa-map-marker-alt me-2"></i>Dammam, Saudi Arabia<br>
+                        <i class="fas fa-map-marker-alt me-2"></i>الدمام، المملكة العربية السعودية<br>
                         <i class="fas fa-phone me-2"></i>+966 XXX XXX XXX<br>
                         <i class="fas fa-envelope me-2"></i>fathimaansal81@gmail.com
                     </p>
@@ -307,7 +310,7 @@
             </div>
             <hr style="border-color: rgba(255,255,255,0.1); margin: 2rem 0 1rem;">
             <div class="text-center" style="color: rgba(255,255,255,0.5);">
-                <p>&copy; 2024 TAWASOL. All rights reserved.</p>
+                <p>&copy; 2024 تواصل. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -316,7 +319,6 @@
     <div class="whatsapp-floating-btn" onclick="openWhatsAppPopup()">
         <i class="fab fa-whatsapp"></i>
     </div>
-    <a href="../../ar/pages/works/works.html" class="lang-floating-btn">Ar</a>
 
     <div id="whatsappPopup" class="whatsapp-popup">
         <div class="whatsapp-popup-content">
@@ -370,8 +372,10 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../script.js"></script>
+    <script src="../../../script.js"></script>
     <script src="./works_script.js"></script>
+    <a href="../../../pages/works/works.html" class="lang-floating-btn"
+        style="font-family: 'Segoe UI', sans-serif;">En</a>
 </body>
 
 </html>

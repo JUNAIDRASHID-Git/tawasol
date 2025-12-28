@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: 'raleway';
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     color: var(--dark);
 }
@@ -35,31 +35,20 @@ body {
 }
 
 .navbar-brand {
-    font-size: 2rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: 2px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
     transition: all 0.3s ease;
 }
 
-.navbar-brand::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary-red), var(--dark-red));
-    transition: width 0.3s ease;
-    border-radius: 2px;
+.navbar-brand img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
-.navbar-brand:hover::after {
-    width: 100%;
+.navbar-brand:hover {
+    transform: scale(1.05);
 }
 
 .nav-link {
@@ -1708,4 +1697,33 @@ body {
     color: var(--gray);
     margin-bottom: 0;
     line-height: 1.5;
+}
+/* Language Floating Button */
+.lang-floating-btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--dark) 0%, #000 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+    text-decoration: none !important;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.lang-floating-btn:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    background: var(--primary-red);
+    color: white !important;
 }
