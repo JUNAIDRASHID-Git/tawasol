@@ -303,8 +303,8 @@
                     <h5>معلومات التواصل</h5>
                     <p style="color: rgba(255,255,255,0.7);">
                         <i class="fas fa-map-marker-alt me-2"></i>الدمام، المملكة العربية السعودية<br>
-                        <i class="fas fa-phone me-2"></i>+966 XXX XXX XXX<br>
-                        <i class="fas fa-envelope me-2"></i>fathimaansal81@gmail.com
+                        <i class="fas fa-phone me-2"></i>+966 05 0290 1669<br>
+                        <i class="fas fa-envelope me-2"></i>contact@tawasoladv.com
                     </p>
                 </div>
             </div>
@@ -322,49 +322,50 @@
 
     <div id="whatsappPopup" class="whatsapp-popup">
         <div class="whatsapp-popup-content">
+            <!-- Popup Header -->
             <div class="whatsapp-popup-header">
                 <div class="whatsapp-popup-title">
                     <i class="fab fa-whatsapp"></i>
-                    <span>Chat with us</span>
+                    <span>تحدث معنا</span>
                 </div>
                 <button class="whatsapp-close-btn" onclick="closeWhatsAppPopup()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
 
+            <!-- Popup Body -->
             <div class="whatsapp-popup-body">
-                <p class="whatsapp-greeting">Hi! 👋 How can we help you today?</p>
+                <p class="whatsapp-greeting">أهلاً! 👋 كيف يمكننا مساعدتك اليوم؟</p>
 
                 <form id="whatsappForm" onsubmit="sendWhatsAppMessage(event)">
                     <div class="whatsapp-form-group">
-                        <input type="text" id="waName" placeholder="Your Name" required>
+                        <input type="text" id="waName" placeholder="اسمك" required>
                     </div>
                     <div class="whatsapp-form-group">
-                        <input type="email" id="waEmail" placeholder="Your Email" required>
+                        <input type="email" id="waEmail" placeholder="بريدك الإلكتروني" required>
                     </div>
                     <div class="whatsapp-form-group">
-                        <input type="tel" id="waPhone" placeholder="Phone Number" required>
+                        <input type="tel" id="waPhone" placeholder="رقم الهاتف" required>
                     </div>
                     <div class="whatsapp-form-group">
                         <select id="waService" required>
-                            <option value="">Select Service</option>
-                            <option value="Tags & Name Plates">Tags & Name Plates</option>
-                            <option value="Printing & Installation">Printing & Installation</option>
-                            <option value="Vehicle Graphics">Vehicle Graphics</option>
-                            <option value="Safety Signs">Safety Signs</option>
-                            <option value="Exhibition Booths">Exhibition Booths</option>
-                            <option value="Indoor Signages">Indoor Signages</option>
-                            <option value="Outdoor Signages">Outdoor Signages</option>
-                            <option value="Corporate Gifts">Corporate Gifts</option>
-                            <option value="Corporate Identity">Corporate Identity</option>
+                            <option value="">اختر الخدمة</option>
+                            <option value="Tags & Name Plates">العلامات واللوحات الاسمية</option>
+                            <option value="Printing & Installation">الطباعة والتركيب</option>
+                            <option value="Vehicle Graphics">رسومات المركبات</option>
+                            <option value="Safety Signs">لوحات السلامة</option>
+                            <option value="Exhibition Booths">أجنحة المعارض</option>
+                            <option value="Indoor Signages">اللوحات الداخلية</option>
+                            <option value="Outdoor Signages">اللوحات الخارجية</option>
+                            <option value="Corporate Gifts">الهدايا الإعلانية</option>
+                            <option value="Corporate Identity">هوية الشركات</option>
                         </select>
                     </div>
                     <div class="whatsapp-form-group">
-                        <textarea id="waMessage" placeholder="Tell us more about your project..." rows="3"
-                            required></textarea>
+                        <textarea id="waMessage" placeholder="أخبرنا المزيد عن مشروعك..." rows="3" required></textarea>
                     </div>
                     <button type="submit" class="whatsapp-send-btn">
-                        <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        <i class="fab fa-whatsapp"></i> إرسال عبر واتساب
                     </button>
                 </form>
             </div>

@@ -41,7 +41,7 @@ if (clientsCarousel) {
 }
 
 // WhatsApp Configuration
-const WHATSAPP_NUMBER = '919037581163'; // Indian WhatsApp number
+const WHATSAPP_NUMBER = '966502901669'; // Saudi WhatsApp number
 
 // WhatsApp Popup Functions
 function openWhatsAppPopup() {
@@ -93,21 +93,7 @@ document.addEventListener('click', function (event) {
     }
 });
 
-// Close any open Bootstrap dropdowns when clicking outside (extra safety)
-document.addEventListener('click', function (event) {
-    if (event.target.closest('.dropdown')) return;
-    document.querySelectorAll('.dropdown.show').forEach(function (drop) {
-        const toggle = drop.querySelector('[data-bs-toggle="dropdown"]');
-        if (toggle) {
-            const inst = bootstrap.Dropdown.getOrCreateInstance(toggle);
-            inst.hide();
-        } else {
-            drop.classList.remove('show');
-            const menu = drop.querySelector('.dropdown-menu');
-            if (menu) menu.classList.remove('show');
-        }
-    });
-});
+// Custom dropdown close logic removed to prevent conflicts with Bootstrap
 
 // Stats Counter Animation
 function animateCounters() {

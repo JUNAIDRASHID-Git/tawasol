@@ -1698,6 +1698,7 @@ body {
     margin-bottom: 0;
     line-height: 1.5;
 }
+
 /* Language Floating Button */
 .lang-floating-btn {
     position: fixed;
@@ -1726,4 +1727,44 @@ body {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
     background: var(--primary-red);
     color: white !important;
+}
+
+/* Fix for Mobile Dropdown Menu */
+@media (max-width: 991.98px) {
+    .navbar-collapse .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100% !important;
+        min-width: 0 !important;
+        margin-top: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 20px;
+        display: none;
+    }
+
+    /* Override grid display for opened dropdown on mobile */
+    .navbar-collapse .dropdown-menu.show {
+        display: block !important;
+    }
+
+    .navbar-collapse .dropdown-menu .dropdown-item {
+        color: rgba(0, 0, 0, 0.7);
+        text-align: left;
+    }
+
+    [dir="rtl"] .navbar-collapse .dropdown-menu {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+
+    [dir="rtl"] .navbar-collapse .dropdown-menu .dropdown-item {
+        text-align: right;
+    }
+
+    .navbar-collapse .dropdown-menu .dropdown-item:hover {
+        background-color: transparent;
+        color: var(--primary-red) !important;
+    }
 }
