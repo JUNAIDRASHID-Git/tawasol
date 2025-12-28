@@ -1611,92 +1611,143 @@ body {
     }
 }
 
-/* Marquee / Running Timeline Animation */
-.timeline-marquee {
-    width: 100%;
-    overflow: hidden;
-    padding: 2rem 0;
+/* Process Timeline - Horizontal Scrollable */
+.process-timeline {
+    padding: 5rem 0;
     position: relative;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    background: var(--bg-surface-2);
 }
 
 .timeline-track {
     display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
+    /* Force horizontal row */
+    overflow-x: auto;
+    /* Allow scrolling if it overflows */
     gap: 2rem;
-    width: max-content;
-    animation: marquee-scroll 25s linear infinite;
-    padding-left: 2rem;
+    padding: 3rem 2rem;
+    /* Extra padding for shadows/hover effects */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    justify-content: flex-start;
+    /* Start from left */
+    /* Hide scrollbar for cleaner look (optional, but good for "design") */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-red) var(--bg-surface-2);
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Pause animation on hover */
-.timeline-marquee:hover .timeline-track {
-    animation-play-state: paused;
+/* Custom Scrollbar */
+.timeline-track::-webkit-scrollbar {
+    height: 8px;
 }
 
-@keyframes marquee-scroll {
-    0% {
-        transform: translateX(0);
-    }
+.timeline-track::-webkit-scrollbar-track {
+    background: var(--bg-surface-2);
+}
 
-    100% {
-        transform: translateX(calc(-50% - 1rem));
-        /* Scroll exactly half the duplicated track */
-    }
+.timeline-track::-webkit-scrollbar-thumb {
+    background-color: var(--primary-red);
+    border-radius: 20px;
+}
+
+.timeline-track::before {
+    display: none;
 }
 
 .timeline-step {
-    flex-shrink: 0;
-    width: 280px;
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    flex: 0 0 300px;
+    /* Fixed width for consistency */
+    position: relative;
+    padding: 2.5rem 2rem;
+    background: var(--bg-surface);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+[dir="rtl"] .timeline-step {
+    text-align: center !important;
 }
 
 .timeline-step:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(227, 30, 36, 0.1);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(227, 30, 36, 0.15);
     border-color: rgba(227, 30, 36, 0.2);
 }
 
-.timeline-arrow {
-    flex-shrink: 0;
-    color: var(--primary-red);
-    font-size: 1.5rem;
+/* Step Number Badge */
+.step-number {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--light-red);
     opacity: 0.5;
-}
-
-.timeline-step .step-number {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: rgba(227, 30, 36, 0.1);
+    position: absolute;
+    top: 10px;
+    right: 20px;
     line-height: 1;
-    margin-bottom: 0.5rem;
+    z-index: 0;
 }
 
-.timeline-step .step-icon {
-    font-size: 2rem;
+[dir="rtl"] .step-number {
+    right: auto;
+    left: 20px;
+}
+
+/* Icon Styling */
+.step-icon {
+    font-size: 2.5rem;
     color: var(--primary-red);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    background: var(--bg-surface-2);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
 
 .timeline-step h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: var(--dark);
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    position: relative;
+    z-index: 1;
 }
 
 .timeline-step p {
-    font-size: 0.9rem;
-    color: var(--gray);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
     margin-bottom: 0;
-    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+}
+
+/* Arrows between steps (optional, can hide if user prefers "cards") 
+   For horizontal flow, arrows make sense. 
+*/
+.timeline-arrow {
+    display: none !important;
+    /* User requested "remove arrows and keep it standard" */
+}
+
+/* Responsive: Center if they fit on large screen */
+@media (min-width: 1400px) {
+    .timeline-track {
+        justify-content: center;
+    }
 }
 
 /* Language Floating Button */
