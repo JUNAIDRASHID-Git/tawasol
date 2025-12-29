@@ -558,7 +558,7 @@ body {
     padding-right: 1.5rem;
 }
 
-.timeline-container {
+.timeline-track {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -643,7 +643,7 @@ body {
 
 /* Responsive Timeline */
 @media (max-width: 1200px) {
-    .timeline-container {
+    .timeline-track {
         gap: 1rem;
     }
 
@@ -676,22 +676,31 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .timeline-container {
-        flex-direction: column;
+@media (max-width: 991px) {
+
+    .timeline-track,
+    html[dir="rtl"] .timeline-track {
+        flex-direction: column !important;
+        align-items: center !important;
         gap: 2rem;
     }
 
     .timeline-step {
         width: 100%;
         min-width: unset;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     .timeline-arrow {
         transform: rotate(90deg);
-        min-height: 30px;
+        min-height: 40px;
         min-width: unset;
+        margin: -10px 0;
+        /* Pull it closer */
     }
+
+    /* RTL specific rotation for mobile removed - relies on default 90deg since style-rtl flips the icon */
 
     .timeline-step {
         padding: 2.3rem 1.5rem;

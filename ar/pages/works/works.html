@@ -66,8 +66,41 @@
     </nav>
 
     <!-- Hero -->
-    <section class="works-hero">
-        <div class="container">
+    <section class="works-hero" style="position: relative; overflow: hidden;">
+        <!-- Home Page Background (Animated SVG) -->
+        <div class="hero-bg" aria-hidden="true"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+            <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"
+                style="width: 100%; height: 100%;">
+                <defs>
+                    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fff4f4" />
+                        <stop offset="40%" stop-color="#FEE2E2" />
+                        <stop offset="100%" stop-color="#fff" />
+                    </linearGradient>
+                    <filter id="blurG">
+                        <feGaussianBlur stdDeviation="45" />
+                    </filter>
+                </defs>
+                <g filter="url(#blurG)">
+                    <circle cx="220" cy="200" r="180" fill="#FFDAB9" fill-opacity="0.18">
+                        <animate attributeName="cx" dur="12s" values="180;260;220" repeatCount="indefinite" />
+                        <animate attributeName="cy" dur="16s" values="180;260;200" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="1200" cy="120" r="260" fill="#EAD7B0" fill-opacity="0.12">
+                        <animate attributeName="cx" dur="14s" values="1200;1100;1200" repeatCount="indefinite" />
+                    </circle>
+                    <circle cx="980" cy="520" r="220" fill="#F5D0C5" fill-opacity="0.12">
+                        <animate attributeName="cy" dur="18s" values="520;440;520" repeatCount="indefinite" />
+                    </circle>
+                </g>
+                <path d="M0 700 L1600 200 L1600 900 L0 900 Z" fill="url(#bgGrad)" opacity="0.6" />
+            </svg>
+        </div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="floating-shape shape-1" aria-hidden="true"></div>
+            <div class="floating-shape shape-2" aria-hidden="true"></div>
             <h1>أهم <span>أعمالنا</span></h1>
             <p>مشاريع مختارة تعرض براعتنا وحلولنا المبتكرة.</p>
         </div>
@@ -109,7 +142,8 @@
                         <div class="work-body">
                             <h5>لوحات المحلات التجارية</h5>
                             <p class="work-meta">لوحات / تركيب</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
+                            <a href="../services/outdoor-signages.html" class="btn btn-outline-dark btn-sm">عرض
+                                التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +157,8 @@
                         <div class="work-body">
                             <h5>تغليف المركبات</h5>
                             <p class="work-meta">هوية / رسومات مركبات</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
+                            <a href="../services/vehicle-graphics.html" class="btn btn-outline-dark btn-sm">عرض
+                                التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -162,7 +197,8 @@
                         <div class="work-body">
                             <h5>أجـنحة المعـارض</h5>
                             <p class="work-meta">تصنيع / أجنحة</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
+                            <a href="../services/exhibition-booths.html" class="btn btn-outline-dark btn-sm">عرض
+                                التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -205,7 +241,8 @@
                         <div class="work-body">
                             <h5>اللوحات الداخلية</h5>
                             <p class="work-meta">داخلي / إرشادية</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
+                            <a href="../services/indoor-signages.html" class="btn btn-outline-dark btn-sm">عرض
+                                التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -218,7 +255,8 @@
                         <div class="work-body">
                             <h5>الهدايا الإعلانية</h5>
                             <p class="work-meta">ترويجي / هدايا</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
+                            <a href="../services/corporate-gifts.html" class="btn btn-outline-dark btn-sm">عرض
+                                التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -256,7 +294,8 @@
                         <div class="work-body">
                             <h5>لوحات الطرق الخارجية</h5>
                             <p class="work-meta">طباعة كبيرة / طباعة</p>
-                            <a href="#" class="btn btn-outline-dark btn-sm">عرض التفاصيل</a>
+                            <a href="../services/outdoor-signages.html" class="btn btn-outline-dark btn-sm">عرض
+                                التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -374,7 +413,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../../script.js"></script>
-    <script src="./works_script.js"></script>
+    <script src="./works_script.js?v=2"></script>
     <a href="../../../pages/works/works.html" class="lang-floating-btn"
         style="font-family: 'Segoe UI', sans-serif;">En</a>
 </body>
